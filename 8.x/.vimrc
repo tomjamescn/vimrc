@@ -122,6 +122,10 @@ set guitablabel=%{Vim_NeatGuiTabLabel()}
 
 let g:airline_theme='luna'
 
+" plug completor.vim 
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc

@@ -4,14 +4,11 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree'
-
-Plug 'maralla/completor.vim'
 
 Plug 'majutsushi/tagbar'
 
