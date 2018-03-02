@@ -4,6 +4,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips'
 
@@ -119,6 +120,11 @@ set guitablabel=%{Vim_NeatGuiTabLabel()}
 
 let g:airline_theme='luna'
 
+" plug UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
