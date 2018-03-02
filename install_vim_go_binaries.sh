@@ -47,8 +47,10 @@ do
         cd $dir
         git_url="https://github.com/${user_name}/${project_name}.git"
         git clone $git_url
+        go get -u -v $i
+    else
+        go install $i
     fi
-    go get -u -v $i
     echo "end"
     echo ""
 done
