@@ -1,4 +1,5 @@
 #!/bin/bash
+# 网络环境会导致直接安装失败，使用此脚本可以避免这个问题
 
 if [ -z $GOPATH ];then
     echo "GOPATH not exists!"
@@ -47,10 +48,8 @@ do
         cd $dir
         git_url="https://github.com/${user_name}/${project_name}.git"
         git clone $git_url
-        go get -u -v $i
-    else
-        go install $i
     fi
+    go get -v $i
     echo "end"
     echo ""
 done

@@ -1,11 +1,11 @@
 set encoding=utf-8              " Set default encoding to UTF-8
-set expandtab 
+set noexpandtab                 " go official recommend using tab instead of space, https://github.com/golang/go/issues/16256
 set tabstop=4
 set shiftwidth=4
 set autoread                    " Automatically read changed files
-" set autoindent                  " Enabile Autoindent
+set autoindent                  " Enabile Autoindent
 set number                      " Show line numbers
-" set showcmd                     " Show me what I'm typing
+set showcmd                     " Show me what I'm typing
 set autowrite                   " auto save when run GoBuild or GoRun
 
 """"""""""""""""""""""

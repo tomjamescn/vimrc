@@ -13,7 +13,7 @@ cd $vim_version.x
 
 cp .vimrc ~/.vimrc
 
-cp -r .vim ~/.vim
+cp -r .vim ~/
 
 vim -c PlugInstall +qall
 
