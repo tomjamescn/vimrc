@@ -22,6 +22,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Initialize plugin system
 call plug#end()
 

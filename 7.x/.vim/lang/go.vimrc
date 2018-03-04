@@ -1,12 +1,13 @@
 set encoding=utf-8              " Set default encoding to UTF-8
-set expandtab 
+set noexpandtab                 " go official recommend using tab instead of space, https://github.com/golang/go/issues/16256
 set tabstop=4
 set shiftwidth=4
 set autoread                    " Automatically read changed files
-" set autoindent                  " Enabile Autoindent
+set autoindent                  " Enabile Autoindent
 set number                      " Show line numbers
-" set showcmd                     " Show me what I'm typing
+set showcmd                     " Show me what I'm typing
 set autowrite                   " auto save when run GoBuild or GoRun
+set foldmethod=syntax
 
 """"""""""""""""""""""
 "      Mappings      "
@@ -47,6 +48,7 @@ let g:go_highlight_generate_tags = 1
 " Open :GoDeclsDir with ctrl-g
 nmap <C-g> :GoDeclsDir<cr>
 imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
+
 
 " build_go_files is a custom function that builds or compiles the test file.
 " It calls :GoBuild if its a Go file, or :GoTestCompile if it's a test file
