@@ -29,6 +29,12 @@ nmap <Leader>i <Plug>(go-info)
 nmap <Leader>l <Plug>(go-metalinter)
 
 nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
