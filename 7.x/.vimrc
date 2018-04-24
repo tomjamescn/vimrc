@@ -24,6 +24,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
+
 " Initialize plugin system
 call plug#end()
 
