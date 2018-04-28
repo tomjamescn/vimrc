@@ -136,4 +136,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
+autocmd FileType php source ~/.vim/lang/php.vimrc
 
