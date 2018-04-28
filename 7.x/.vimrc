@@ -38,6 +38,10 @@ syntax enable
 set fdm=marker
 filetype plugin on
 
+"tags
+set autochdir
+set tags=tags;
+
 " tagbar
 nmap <F8> :TagbarToggle<CR>
 
