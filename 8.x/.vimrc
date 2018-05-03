@@ -15,11 +15,9 @@ Plug 'maralla/completor.vim'
 
 Plug 'majutsushi/tagbar'
 
-" https://github.com/terryma/vim-expand-region
 Plug 'terryma/vim-expand-region'
 
 Plug 'bling/vim-airline'
-
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -27,6 +25,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
+
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Initialize plugin system
 call plug#end()
