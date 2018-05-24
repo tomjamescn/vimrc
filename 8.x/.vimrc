@@ -39,6 +39,7 @@ set expandtab
 syntax enable
 set fdm=marker
 filetype plugin on
+set encoding=utf8
 
 "tags
 set autochdir
