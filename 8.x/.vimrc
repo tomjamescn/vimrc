@@ -28,6 +28,8 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'vim-syntastic/syntastic'
+
 " Initialize plugin system
 call plug#end()
 
@@ -40,6 +42,17 @@ syntax enable
 set fdm=marker
 filetype plugin on
 set encoding=utf8
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 "tags
 set autochdir
