@@ -28,7 +28,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic', { 'for': ['php', 'python'] }
 
 " Initialize plugin system
 call plug#end()
@@ -42,6 +42,9 @@ syntax enable
 set fdm=marker
 filetype plugin on
 set encoding=utf8
+
+"ultisnips
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 "syntastic
 set statusline+=%#warningmsg#
