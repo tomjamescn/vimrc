@@ -43,8 +43,6 @@ set fdm=marker
 filetype plugin on
 set encoding=utf8
 
-"ultisnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 "syntastic
 set statusline+=%#warningmsg#
@@ -155,8 +153,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 " plug UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<c-r>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 
 " file type config
