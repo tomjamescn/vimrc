@@ -48,6 +48,9 @@ set fdm=marker
 filetype plugin on
 set encoding=utf8
 
+"completor.vim
+"c/c++
+let g:completor_clang_binary = '/usr/bin/clang'
 
 "syntastic
 set statusline+=%#warningmsg#
