@@ -30,6 +30,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'vim-syntastic/syntastic', { 'for': ['php', 'python'] }
 
+" You must install ag:
+" https://github.com/ggreer/the_silver_searcher
+" sudo apt install silversearcher-ag
+Plug 'mileszs/ack.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -157,6 +162,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-e>"
 let g:UltiSnipsJumpBackwardTrigger="<c-r>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
+" plug ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column --noaffinity'
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
