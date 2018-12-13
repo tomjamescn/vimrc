@@ -6,9 +6,9 @@ rm ~/.vimrc
 rm -rf ~/.vim
 rm ~/.viminfo
 
-mv $latest_backup_dir/.vimrc ~/
-mv $latest_backup_dir/.vim ~/
-mv $latest_backup_dir/.viminfo ~/
+cp -r $latest_backup_dir/.vimrc ~/
+cp -r $latest_backup_dir/.vim ~/
+cp -r $latest_backup_dir/.viminfo ~/
 
 echo "resotre successfule!"
 
