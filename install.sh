@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#load current config
+source ~/.bashrc
+
 #first, backup old config
 backup_dir=~/.vim_backup_`date +%Y-%m-%d_%H%M%S`
 mkdir $backup_dir
