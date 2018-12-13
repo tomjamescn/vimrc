@@ -28,6 +28,13 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'vim-syntastic/syntastic', { 'for': ['php', 'python'] }
+
+" You must install ag:
+" https://github.com/ggreer/the_silver_searcher
+" sudo apt install silversearcher-ag
+Plug 'mileszs/ack.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -39,6 +46,22 @@ set expandtab
 syntax enable
 set fdm=marker
 filetype plugin on
+set encoding=utf8
+
+"completor.vim
+"c/c++
+let g:completor_clang_binary = '/usr/bin/clang'
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 "tags
 set autochdir
@@ -138,9 +161,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 " plug UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<c-r>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
+" plug ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column --noaffinity'
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
