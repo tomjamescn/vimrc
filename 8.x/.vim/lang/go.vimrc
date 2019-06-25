@@ -35,6 +35,9 @@ command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
+" :GoInstallBinaries时不要去掉go get的-u选项
+let g:go_get_update = 0
+
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
