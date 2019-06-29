@@ -12,22 +12,35 @@ mkdir -p $dir
 
 cd $dir
 
-git clone https://github.com/golang/tools.git
-git clone https://github.com/golang/lint.git
-git clone https://github.com/golang/crypto.git
-git clone https://github.com/golang/debug.git
-git clone https://github.com/golang/image.git
-git clone https://github.com/golang/net.git
-git clone https://github.com/golang/sys.git
-git clone https://github.com/golang/text.git
-git clone https://github.com/golang/time.git
-git clone https://github.com/golang/sync.git
-
-go_installs=("golang.org/x/lint/golint" \
-    "golang.org/x/tools/cmd/goimports" \
-    "golang.org/x/tools/cmd/gorename" \
-    "golang.org/x/tools/cmd/guru" \
+go_x_packages=("tools" \
+    "lint" \
+    "crypto" \
+    "debug" \
+    "image" \
+    "net" \
+    "sys" \
+    "text" \
+    "time" \
+    "sync"
 )
+
+for i in ${go_x_packages[@]};
+do
+    echo $i
+    if [ -d "$i" ]; then
+        #已经存在了，更新
+        cd $i
+        #git pull
+        cd ../
+    else
+        #
+        git clone https://github.com/golang/{$i}.git
+    fi
+done
+
+dir=$GOPATH/src/github.com
+
+cd $dir
 
 go_installs=("github.com/klauspost/asmfmt/cmd/asmfmt" \
 	"github.com/go-delve/delve/cmd/dlv" \
@@ -38,15 +51,10 @@ go_installs=("github.com/klauspost/asmfmt/cmd/asmfmt" \
 	"github.com/stamblerre/gocode" \
 	"github.com/rogpeppe/godef" \
 	"github.com/zmb3/gogetdoc" \
-	"golang.org/x/tools/cmd/goimports" \
-	"golang.org/x/lint/golint" \
-	"golang.org/x/tools/cmd/gopls" \
 	"github.com/alecthomas/gometalinter" \
 	"github.com/golangci/golangci-lint/cmd/golangci-lint" \
 	"github.com/fatih/gomodifytags" \
-	"golang.org/x/tools/cmd/gorename" \
 	"github.com/jstemmer/gotags" \
-	"golang.org/x/tools/cmd/guru" \
 	"github.com/josharian/impl" \
 	"honnef.co/go/tools/cmd/keyify" \
 	"github.com/fatih/motion" \
@@ -56,20 +64,24 @@ go_installs=("github.com/klauspost/asmfmt/cmd/asmfmt" \
 for i in ${go_installs[@]};
 do
     echo $i
-    echo "start..."
     IFS='/' read -r -a arr <<< "$i"
     domain_name=${arr[0]}
     user_name=${arr[1]}
     project_name=${arr[2]}
-    if [ "$domain_name" == "github.com" ]; then
-        dir="${GOPATH}/src/github.com"
-        mkdir -p $dir
-        cd $dir
-        git_url="https://github.com/${user_name}/${project_name}.git"
-        git clone $git_url
+    if [ "$domain_name" != "github.com" ]; then
+        echo "忽略非github.com包"
+    else
+        package="${user_name}/${project_name}"
+        if [ -d "$package" ]; then
+            #更新
+            cd $package
+            git pull
+            cd ../../
+        else
+            git_url="https://github.com/${package}.git"
+            git clone $git_url $package
+        fi
     fi
-    echo "end"
-    echo ""
 done
 
 vim main.go -c GoInstallBinaries +qall

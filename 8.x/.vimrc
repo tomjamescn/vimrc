@@ -171,4 +171,5 @@ let g:ackprg = 'ag --nogroup --nocolor --column --noaffinity'
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
 autocmd FileType php source ~/.vim/lang/php.vimrc
+autocmd FileType c source ~/.vim/lang/c.vimrc
 
