@@ -23,7 +23,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': ['go', 'asm', 'gohtmltmpl'] }
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -222,6 +222,8 @@ endif
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
+autocmd FileType asm source ~/.vim/lang/go.vimrc
+autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
 autocmd FileType php source ~/.vim/lang/php.vimrc
 autocmd FileType c source ~/.vim/lang/c.vimrc
 
