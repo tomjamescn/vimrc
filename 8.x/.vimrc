@@ -35,6 +35,8 @@ Plug 'vim-syntastic/syntastic', { 'for': ['php', 'python'] }
 " sudo apt install silversearcher-ag
 Plug 'mileszs/ack.vim'
 
+Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
+
 " Initialize plugin system
 call plug#end()
 
