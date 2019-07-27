@@ -1,3 +1,6 @@
+
+
+" {{{  插件列表
 " #########################vim-plug begin#######################
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -20,7 +23,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': ['go', 'asm', 'gohtmltmpl'] }
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -35,6 +38,8 @@ Plug 'vim-syntastic/syntastic', { 'for': ['php', 'python'] }
 " sudo apt install silversearcher-ag
 Plug 'mileszs/ack.vim'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
 
 " Initialize plugin system
@@ -43,6 +48,9 @@ call plug#end()
 " #########################vim-plug end#######################
 
 
+" }}}
+
+"{{{ 常规设置
 set ts=4
 set expandtab
 syntax enable
@@ -50,34 +58,15 @@ set fdm=marker
 filetype plugin on
 set encoding=utf8
 
-"completor.vim
-"c/c++
-let g:completor_clang_binary = '/usr/bin/clang'
-
-"syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-
-"tags
-set autochdir
-set tags=tags;
-
-" tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" nerdtree
-nmap <F7> :NERDTreeToggle<CR>
-
 "paste
 set pastetoggle=<F4>
 
+" {{{ tags
+set autochdir
+set tags=tags;
+" }}}
+
+"{{{ 自定义tab的标题
 "begin tab config
 " make tabline in terminal mode
 function! Vim_NeatTabLine()
@@ -153,24 +142,90 @@ endfunc
 set tabline=%!Vim_NeatTabLine()
 set guitablabel=%{Vim_NeatGuiTabLabel()}
 
-let g:airline_theme='luna'
 
+"}}}
+
+
+"}}}
+
+" {{{ 常用热键
+" leader key设为,
+let mapleader = ","
+
+" 保存当前文件
+noremap <leader>s :w<cr>
+
+" 插入模式
+"   输入'"<{[`自动补全另外一半，并将光标移动到合适的位置
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
+inoremap ` ``<esc>i
+" }}}
+
+"{{{ 插件配置
+
+"{{{ CtrlP配置
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --noaffinity -g ""'
+endif
+"}}}
+
+"{{{ syntastic配置
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"}}}
+
+" {{{ tagbar
+nmap <F8> :TagbarToggle<CR>
+" }}}
+
+" {{{ nerdtree
+nmap <F7> :NERDTreeToggle<CR>
+" }}}
+
+"{{{ airline主题配置
+let g:airline_theme='luna'
+"}}}"
+
+"{{{ completor.vim配置
 " plug completor.vim 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+"}}}"
 
+"{{{ UltiSnips配置
 " plug UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-e>"
 let g:UltiSnipsJumpBackwardTrigger="<c-r>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+"}}}"
 
+"{{{
 " plug ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column --noaffinity'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+"}}}"
+
+"}}}"
 
 " file type config
 autocmd FileType go source ~/.vim/lang/go.vimrc
+autocmd FileType asm source ~/.vim/lang/go.vimrc
+autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
 autocmd FileType php source ~/.vim/lang/php.vimrc
+autocmd FileType c source ~/.vim/lang/c.vimrc
 

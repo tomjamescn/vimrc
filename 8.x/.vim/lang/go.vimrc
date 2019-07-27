@@ -1,3 +1,5 @@
+" 要理解此文件的配置，请阅读https://github.com/fatih/vim-go/wiki/Tutorial
+
 set encoding=utf-8              " Set default encoding to UTF-8
 set noexpandtab                 " go official recommend using tab instead of space, https://github.com/golang/go/issues/16256
 set tabstop=4
