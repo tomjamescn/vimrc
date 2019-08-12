@@ -15,3 +15,6 @@
 - fatih/vim-go plug only for *.go file
 - more humanized tab label
 - ...
+
+## usage
+please visit [this post](https://tomjamescn.github.io/2019-07-28-mastering-vim-part-2/), this was written in Chinese.
