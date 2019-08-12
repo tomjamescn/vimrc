@@ -223,9 +223,10 @@ endif
 "}}}"
 
 " file type config
-autocmd FileType go source ~/.vim/lang/go.vimrc
-autocmd FileType asm source ~/.vim/lang/go.vimrc
-autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
-autocmd FileType php source ~/.vim/lang/php.vimrc
-autocmd FileType c source ~/.vim/lang/c.vimrc
+autocmd FileType go source ~/.vim/lang/go.vim
+autocmd FileType asm source ~/.vim/lang/go.vim
+autocmd FileType gohtmltmpl source ~/.vim/lang/go.vim
+autocmd FileType php source ~/.vim/lang/php.vim
+autocmd FileType c source ~/.vim/lang/c.vim
+autocmd FileType proto source ~/.vim/lang/proto.vim
 
