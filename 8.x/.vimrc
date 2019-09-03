@@ -42,6 +42,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
 
+Plug 'cespare/vim-toml'
+
 " Initialize plugin system
 call plug#end()
 
