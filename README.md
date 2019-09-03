@@ -12,7 +12,7 @@
 - vim-plug as plug manager
 - file type specified vimrc in dir ~/.vim/lang/
 - *.go specified vimrc coming from https://github.com/fatih/vim-go-tutorial
-- fatih/vim-go plug only for *.go file
+- fatih/vim-go plug only for *.go file. [vim-go usage](https://github.com/fatih/vim-go/wiki/Tutorial)
 - more humanized tab label
 - ...
 

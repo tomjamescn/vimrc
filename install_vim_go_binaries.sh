@@ -34,7 +34,7 @@ do
         cd ../
     else
         #
-        git clone https://github.com/golang/{$i}.git
+        git clone https://github.com/golang/${i}.git
     fi
 done
 
