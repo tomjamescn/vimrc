@@ -231,4 +231,5 @@ autocmd FileType gohtmltmpl source ~/.vim/lang/go.vim
 autocmd FileType php source ~/.vim/lang/php.vim
 autocmd FileType c source ~/.vim/lang/c.vim
 autocmd FileType proto source ~/.vim/lang/proto.vim
+autocmd FileType toml source ~/.vim/lang/toml.vim
 
