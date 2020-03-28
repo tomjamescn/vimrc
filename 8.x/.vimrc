@@ -42,6 +42,9 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
 
+" rust
+Plug 'rust-lang/rust.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -202,6 +205,10 @@ let g:airline_theme='luna'
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+let g:completor_filetype_map = {
+      \ 'go':   {'ft': 'lsp', 'cmd': 'gopls'},
+      \ 'rust': {'ft': 'lsp', 'cmd': 'rls'},
+      \ }
 "}}}"
 
 "{{{ UltiSnips配置
