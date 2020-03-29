@@ -31,4 +31,10 @@ Finally, install
 - more humanized tab label
 
 ## USAGE
+
+### useful snippets
+https://github.com/honza/vim-snippets/tree/master/UltiSnips
+
+
+
 please visit [this post](https://tomjamescn.github.io/2019-07-28-mastering-vim-part-2/), this was written in Chinese.

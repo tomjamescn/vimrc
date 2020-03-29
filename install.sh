@@ -19,6 +19,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.vim/vimrc'
 
+# install plug in vimrc
 $vim -c PlugInstall +qall
 
 # vim-go
@@ -26,4 +27,7 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 
 vim main.go -c GoInstallBinaries +qall
+
+# Coc extensions
+vim -c 'CocInstall -sync coc-json coc-snippets coc-git|q'
 
