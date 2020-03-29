@@ -26,6 +26,9 @@ command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
@@ -33,13 +36,13 @@ let g:go_def_mapping_enabled = 0
 " do Not fold after save
 let g:go_fmt_experimental = 1
 
-" some highlight
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
+" some highlight, no effect under coc.nvim
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_extra_types = 1
+"let g:go_highlight_generate_tags = 1
 
 " build_go_files is a custom function that builds or compiles the test file.
 " It calls :GoBuild if its a Go file, or :GoTestCompile if it's a test file

@@ -11,7 +11,7 @@ export MYVIMRC='~/.vim/vimrc'
 Then, install
 ```sh
 - git clone https://github.com/tomjamescn/vimrc.git ~/.vim
-- cd vimrc
+- cd ~/.vim
 - ./install.sh
 - [optional] git checkout some-vers
 ```
