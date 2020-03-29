@@ -2,19 +2,25 @@
 
 ## INSTALL
 
-FIRST, you should add the export below to you .bashrc or .zshrc etc and reload it.
+First, you should add the export below to you .bashrc or .zshrc etc and reload it.
 ```sh
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.vim/vimrc'
 ```
 
-Then, install
+Then, coc.nvim need nodejs:
+```sh
+curl -sL install-node.now.sh/lts | bash
+```
+
+Finally, install
 ```sh
 - git clone https://github.com/tomjamescn/vimrc.git ~/.vim
 - cd ~/.vim
 - ./install.sh
 - [optional] git checkout some-vers
 ```
+
 
 ## FEATURE
 - vim-plug as plug manager
