@@ -27,8 +27,12 @@ go env -w GOPROXY=https://goproxy.cn,direct
 vim main.go -c GoInstallBinaries +qall
 
 # Coc extensions
-vim -c 'CocInstall -sync coc-json coc-snippets coc-git|q'
+vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-rls|q'
 
 # bash language server
 npm i -g bash-language-server
+
+# rust
+rustup update
+rustup component add rls rust-analysis rust-src
 
