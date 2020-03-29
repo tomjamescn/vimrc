@@ -24,4 +24,5 @@ Then, install
 - rust out of the box using rust.vim
 - more humanized tab label
 
-
+## USAGE
+please visit [this post](https://tomjamescn.github.io/2019-07-28-mastering-vim-part-2/), this was written in Chinese.
