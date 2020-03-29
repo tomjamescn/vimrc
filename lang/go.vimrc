@@ -11,17 +11,6 @@ set showcmd                     " Show me what I'm typing
 set autowrite                   " auto save when run GoBuild or GoRun
 set foldmethod=syntax
 
-""""""""""""""""""""""
-"      Mappings      "
-""""""""""""""""""""""
-
-" Set leader shortcut to a comma ','. By default it's the backslash
-let mapleader = ","
-
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
-
 nmap <leader>b  <Plug>(go-build)
 nmap <leader>r  <Plug>(go-run)
 nmap <leader>t  <Plug>(go-test)
@@ -37,32 +26,20 @@ command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
-" :GoInstallBinaries时不要去掉go get的-u选项
-let g:go_get_update = 0
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
 
-"""""""""""""""""""""
-"      Plugins      "
-"""""""""""""""""""""
+" do Not fold after save
+let g:go_fmt_experimental = 1
 
-" vim-go
-let g:go_fmt_command = "goimports"
-let g:go_autodetect_gopath = 1
-let g:go_list_type = "quickfix"
-
+" some highlight
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
-
-"" do Not fold after save
-let g:go_fmt_experimental = 1
-
-" Open :GoDeclsDir with ctrl-g
-nmap <C-g> :GoDeclsDir<cr>
-imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
-
 
 " build_go_files is a custom function that builds or compiles the test file.
 " It calls :GoBuild if its a Go file, or :GoTestCompile if it's a test file

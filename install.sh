@@ -2,13 +2,6 @@
 
 vim=vim
 
-#first, backup old config
-backup_dir=~/.vim_backup_`date +%Y-%m-%d_%H%M%S`
-mkdir $backup_dir
-mv ~/.vimrc $backup_dir/
-mv ~/.vim $backup_dir/
-mv ~/.viminfo $backup_dir/
-
 vim_version=`$vim --version | head -n 1 | grep -oE 'VIM - Vi IMproved [0-9].' | grep -o '[0-9]'`
 if [ "$vim_version" != "8" ]; then
     echo "only support vim 8.x now!"
@@ -19,14 +12,18 @@ echo "vim version:"
 echo $vim_version
 echo ""
 
+# install plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-cd $vim_version.x
-
-cp .vimrc ~/.vimrc
-
-cp -r .vim ~/
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.vim/vimrc'
 
 $vim -c PlugInstall +qall
+
+# vim-go
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+
+vim main.go -c GoInstallBinaries +qall
 
