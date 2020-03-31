@@ -21,6 +21,10 @@ Finally, install
 - [optional] git checkout some-vers
 ```
 
+## SETTING
+### coc-python
+please follow https://github.com/neoclide/coc-python
+
 
 ## FEATURE
 - vim-plug as plug manager
