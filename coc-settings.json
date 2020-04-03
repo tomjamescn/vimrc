@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["rust"],
   "python.jediEnabled": false,
+  "javascript.format.enabled": true,
   "languageserver": {
     "golang": {
       "command": "gopls",

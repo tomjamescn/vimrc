@@ -36,6 +36,8 @@ let g:go_def_mapping_enabled = 0
 " do Not fold after save
 let g:go_fmt_experimental = 1
 
+let g:go_list_type = "quickfix"
+
 " some highlight, no effect under coc.nvim
 "let g:go_highlight_types = 1
 "let g:go_highlight_fields = 1

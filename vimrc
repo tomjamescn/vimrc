@@ -387,4 +387,5 @@ autocmd FileType asm source ~/.vim/lang/go.vimrc
 autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
 autocmd FileType php source ~/.vim/lang/php.vimrc
 autocmd FileType c source ~/.vim/lang/c.vimrc
+autocmd FileType javascript source ~/.vim/lang/js.vimrc
 
