@@ -38,6 +38,20 @@ let g:go_fmt_experimental = 1
 
 let g:go_list_type = "quickfix"
 
+" layout of debug
+" Defaults:
+" >
+"  let g:go_debug_windows = {
+"            \ 'vars':       'leftabove 30vnew',
+"            \ 'stack':      'leftabove 20new',
+"            \ 'goroutines': 'botright 10new',
+"            \ 'out':        'botright 5new',
+"  \ }
+let g:go_debug_windows = {
+      \ 'vars':       'rightbelow 60vnew',
+      \ 'stack':      'rightbelow 10new',
+\ }
+
 " some highlight, no effect under coc.nvim
 "let g:go_highlight_types = 1
 "let g:go_highlight_fields = 1
