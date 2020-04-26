@@ -389,4 +389,5 @@ autocmd FileType php source ~/.vim/lang/php.vimrc
 autocmd FileType c source ~/.vim/lang/c.vimrc
 autocmd FileType javascript source ~/.vim/lang/js.vimrc
 autocmd FileType json source ~/.vim/lang/js.vimrc
+autocmd FileType html source ~/.vim/lang/html.vimrc
 
