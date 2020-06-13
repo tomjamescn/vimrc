@@ -7,6 +7,8 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim/killersheep'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -37,6 +39,15 @@ Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
 " rust
 Plug 'rust-lang/rust.vim'
 
+" vim-prettier for auto format javascript, typescript, less, scss, css, json,
+" graphsql and markdown
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+" Automatically close brackets.
+Plug 'jiangmiao/auto-pairs'
+
 " Initialize plugin system
 call plug#end()
 
@@ -52,6 +63,9 @@ syntax enable
 set fdm=marker
 filetype plugin on
 set encoding=utf8
+
+" backspace在Insert模式下可以删除
+set backspace=indent,eol,start
 
 "paste
 set pastetoggle=<F4>
@@ -386,8 +400,11 @@ autocmd FileType go source ~/.vim/lang/go.vimrc
 autocmd FileType asm source ~/.vim/lang/go.vimrc
 autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
 autocmd FileType php source ~/.vim/lang/php.vimrc
+autocmd FileType python source ~/.vim/lang/python.vimrc
 autocmd FileType c source ~/.vim/lang/c.vimrc
 autocmd FileType javascript source ~/.vim/lang/js.vimrc
+autocmd FileType typescript source ~/.vim/lang/js.vimrc
+autocmd FileType typescriptreact source ~/.vim/lang/js.vimrc
 autocmd FileType json source ~/.vim/lang/js.vimrc
 autocmd FileType html source ~/.vim/lang/html.vimrc
 autocmd FileType yaml source ~/.vim/lang/yaml.vimrc

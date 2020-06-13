@@ -113,3 +113,28 @@ if err != nil {
 	log.${1:Fatal}(err)
 }
 endsnippet
+
+# defer 
+snippet dfr "Defer" b
+defer func(){
+	${1:code}
+}()
+endsnippet
+
+# defer recover
+snippet dfrr "Defer Recover" b
+defer func(){
+	if err := recover(); err != nil {
+		${1:code}
+	}
+}()
+endsnippet
+
+# go func
+snippet gofunc "Go func" b
+go func(){
+	${1:code}
+}()
+endsnippet
+
+

@@ -1,7 +1,15 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["rust"],
+  "coc.preferences.formatOnSaveFiletypes": ["rust", "python"],
   "python.jediEnabled": false,
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": [
+      "--注释：下面的参数用来忽略'Undefined variable'错误提示,详见https://stackoverflow.com/questions/15088938/how-to-disable-pylint-undefined-variable-error-for-a-specific-variable-in-a-fi",
+      "--dummy-variables-rgx='(_+[a-zA-Z0-9]*?$)|dummy|qdict'",
+      "--dummy-variables='_,dummy,host_object'"
+  ],
   "javascript.format.enabled": true,
+  "tsserver.log": "verbose",
   "languageserver": {
     "golang": {
       "command": "gopls",
