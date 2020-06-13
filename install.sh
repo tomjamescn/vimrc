@@ -23,7 +23,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 vim main.go -c GoInstallBinaries +qall
 
 # Coc extensions
-vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-rls coc-python coc-tsserver|q'
+vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-rls coc-python coc-tsserver coc-phpls|q'
 
 # bash language server
 npm i -g bash-language-server
