@@ -1,12 +1,15 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["rust", "python"],
+  "coc.preferences.formatOnSaveFiletypes": ["rust"],
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
   "python.linting.pylintArgs": [
-      "--注释：下面的参数用来忽略'Undefined variable'错误提示,详见https://stackoverflow.com/questions/15088938/how-to-disable-pylint-undefined-variable-error-for-a-specific-variable-in-a-fi",
-      "--dummy-variables-rgx='(_+[a-zA-Z0-9]*?$)|dummy|qdict'",
-      "--dummy-variables='_,dummy,host_object'"
+    "--注释：下面的参数用来忽略'Undefined variable'错误提示,详见https://stackoverflow.com/questions/15088938/how-to-disable-pylint-undefined-variable-error-for-a-specific-variable-in-a-fi",
+    "--dummy-variables-rgx='(_+[a-zA-Z0-9]*?$)|dummy|qdict'",
+    "--dummy-variables='_,dummy,host_object'"
+  ],
+  "python.formatting.autopep8Args": [
+    "--ignore", "E402"
   ],
   "javascript.format.enabled": true,
   "tsserver.log": "verbose",
@@ -22,5 +25,6 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     }
-  }
+  },
+  "clangd.path": "/Users/tangwei/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
 }
