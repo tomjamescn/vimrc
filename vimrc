@@ -48,6 +48,9 @@ Plug 'prettier/vim-prettier', {
 " Automatically close brackets.
 Plug 'jiangmiao/auto-pairs'
 
+" you may install manual: `pip install doq`
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+
 " Initialize plugin system
 call plug#end()
 
