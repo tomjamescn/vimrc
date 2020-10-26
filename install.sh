@@ -25,5 +25,5 @@ export MYVIMRC='~/.vim/vimrc'
 vim -c PlugInstall +qall
 
 # Coc extensions
-vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
+#vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
 
