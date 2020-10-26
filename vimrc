@@ -21,8 +21,6 @@ Plug 'majutsushi/tagbar'
 
 Plug 'terryma/vim-expand-region'
 
-Plug 'fatih/vim-go', { 'for': ['go', 'asm', 'gohtmltmpl'] }
-
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -35,9 +33,6 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 
 Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
-
-" rust
-Plug 'rust-lang/rust.vim'
 
 " vim-prettier for auto format javascript, typescript, less, scss, css, json,
 " graphsql and markdown
@@ -399,10 +394,6 @@ endif
 "}}}"
 
 " file type config
-autocmd FileType go source ~/.vim/lang/go.vimrc
-autocmd FileType asm source ~/.vim/lang/go.vimrc
-autocmd FileType gohtmltmpl source ~/.vim/lang/go.vimrc
-autocmd FileType php source ~/.vim/lang/php.vimrc
 autocmd FileType python source ~/.vim/lang/python.vimrc
 autocmd FileType c source ~/.vim/lang/c.vimrc
 autocmd FileType javascript source ~/.vim/lang/js.vimrc
