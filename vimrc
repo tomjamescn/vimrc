@@ -70,8 +70,13 @@ set encoding=utf8
 " backspace在Insert模式下可以删除
 set backspace=indent,eol,start
 
-"paste
+" paste
 set pastetoggle=<F4>
+
+" F5映射为刷新所有buffer，可以在vim外部更新文件后使用
+" https://vi.stackexchange.com/questions/458/how-can-i-reload-all-buffers-at-once
+nnoremap <F5> :checktime<CR>
+set autoread
 
 " {{{ tags
 set autochdir
