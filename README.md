@@ -37,6 +37,12 @@ Finally, install
 ### config
 > leader key is `,`
 
+### hotkey
+- `F4` enter paste mode
+- `F5` refresh all buffer
+- `F7` open nerdtree window on left
+- `F8` open tagbar window on right
+
 
 ### hotkey from coc.nvim default setting
 - `[g` and `]g` to navigate diagnostics
