@@ -6,18 +6,6 @@ add-apt-repository ppa:jonathonf/vim -y
 apt update
 apt install -y vim vim-nox
 
-cat << EOF >> $HOME/.bashrc
-
-export MYVIMRC='~/.vim/vimrc'
-export VIMINIT='source \$MYVIMRC'
-EOF
-
-cat << EOF >> $HOME/.zshrc
-
-export MYVIMRC='~/.vim/vimrc'
-export VIMINIT='source \$MYVIMRC'
-EOF
-
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC='~/.vim/vimrc'
 
