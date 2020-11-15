@@ -23,12 +23,7 @@ export VIMINIT='source $MYVIMRC'
 EOF
 
 
-
 cd $HOME/.vim \
     && git pull \
     && git checkout only-python
-
-vim -c PlugInstall +qall
-
-vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
 
