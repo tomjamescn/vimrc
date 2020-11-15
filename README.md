@@ -71,7 +71,7 @@ please visit [this post](https://tomjamescn.github.io/2019-07-28-mastering-vim-p
 ### install only-python vim IDE for docker env
 ```
 # install requirement and git clone vimrc
-curl https://cdn.jsdelivr.net/gh/tomjamescn/vimrc/install-python-ide-in-docker.sh | bash
+curl https://cdn.jsdelivr.net/gh/tomjamescn/vimrc@v0.1.0/install-python-ide-in-docker.sh | bash
 
 # install plug
 vim -c PlugInstall +qall
