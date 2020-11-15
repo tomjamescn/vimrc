@@ -17,7 +17,6 @@ apt update
 apt install -y yarn
 
 
-
 git clone https://github.com/tomjamescn/vimrc.git $HOME/.vim 
 
 cd $HOME/.vim \
@@ -29,9 +28,11 @@ vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
 
 cat << EOF >> $HOME/.zshrc
 
-export VIMINIT='source \$MYVIMRC'
 export MYVIMRC='~/.vim/vimrc'
+export VIMINIT='source $MYVIMRC'
 
 EOF
 ```
+
+zsh
 
