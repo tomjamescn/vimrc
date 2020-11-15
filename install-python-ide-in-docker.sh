@@ -9,14 +9,6 @@ sh -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh
 
 curl -sL install-node.now.sh/lts | bash -s -- --yes
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-apt update
-apt install -y yarn
-
-
 git clone https://github.com/tomjamescn/vimrc.git $HOME/.vim 
 
 cd $HOME/.vim \
