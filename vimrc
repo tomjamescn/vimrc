@@ -34,12 +34,6 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'tenfyzhong/tagbar-markdown.vim', {'for': ['md', 'markdown'] }
 
-" vim-prettier for auto format javascript, typescript, less, scss, css, json,
-" graphsql and markdown
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-
 " Automatically close brackets.
 Plug 'jiangmiao/auto-pairs'
 
