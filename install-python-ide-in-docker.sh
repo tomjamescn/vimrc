@@ -29,7 +29,7 @@ vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
 
 cat << EOF >> $HOME/.zshrc
 
-export VIMINIT='source $MYVIMRC'
+export VIMINIT='source \$MYVIMRC'
 export MYVIMRC='~/.vim/vimrc'
 
 EOF
