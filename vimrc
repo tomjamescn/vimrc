@@ -43,13 +43,13 @@ Plug 'rust-lang/rust.vim'
 " graphsql and markdown
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}
 
 " Automatically close brackets.
 Plug 'jiangmiao/auto-pairs'
 
 " you may install manual: `pip install doq`
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'heavenshell/vim-pydocstring'
 
 " Initialize plugin system
 call plug#end()
