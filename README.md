@@ -67,3 +67,15 @@ https://github.com/honza/vim-snippets/tree/master/UltiSnips
 
 
 please visit [this post](https://tomjamescn.github.io/2019-07-28-mastering-vim-part-2/), this was written in Chinese.
+
+### install only-python vim IDE for docker env
+```
+# install requirement and git clone vimrc
+curl https://cdn.jsdelivr.net/gh/tomjamescn/vimrc@v0.1.0/install-python-ide-in-docker.sh | bash
+
+# install plug
+vim -c PlugInstall +qall
+
+# install coc plug extensions
+vim -c 'CocInstall -sync coc-json coc-snippets coc-git coc-python|q'
+```

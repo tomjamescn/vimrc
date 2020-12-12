@@ -42,8 +42,8 @@ Plug 'rust-lang/rust.vim'
 " vim-prettier for auto format javascript, typescript, less, scss, css, json,
 " graphsql and markdown
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']}
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Automatically close brackets.
 Plug 'jiangmiao/auto-pairs'
