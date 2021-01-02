@@ -9,7 +9,7 @@
     "--dummy-variables='_,dummy,host_object'"
   ],
   "python.formatting.autopep8Args": [
-    "--ignore", "E402"
+    "--ignore", "E402,E501"
   ],
   "javascript.format.enabled": true,
   "tsserver.log": "verbose",

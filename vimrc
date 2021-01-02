@@ -51,6 +51,9 @@ Plug 'jiangmiao/auto-pairs'
 " you may install manual: `pip install doq`
 Plug 'heavenshell/vim-pydocstring'
 
+" yaml fold
+Plug 'pedrohdz/vim-yaml-folds'
+ 
 " Initialize plugin system
 call plug#end()
 
@@ -66,6 +69,7 @@ syntax enable
 set fdm=marker
 filetype plugin on
 set encoding=utf8
+set nu
 
 " backspace在Insert模式下可以删除
 set backspace=indent,eol,start
