@@ -71,6 +71,10 @@ filetype plugin on
 set encoding=utf8
 set nu
 
+"解决注释颜色不对的问题：
+"https://github.com/tmux/tmux/issues/699
+set background=dark
+
 " backspace在Insert模式下可以删除
 set backspace=indent,eol,start
 
